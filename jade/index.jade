@@ -3,7 +3,7 @@ html(lang='en')
   head
     meta(charset='utf-8')
     title Slide show
-    link(rel="stylesheet", href="/assets/css/index.css", attr)
+    link(rel="stylesheet", href="/assets/css/BP-slider.min.css", attr)
   body
     .button-holder
       .button#slideLeft Slide Left
@@ -18,4 +18,11 @@ html(lang='en')
               .right
                 h1 hello slide #{i}
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-  script(src="/assets/js/index.js")
+  script(src="/assets/js/BP-slider.min.js")
+  script.
+    $('body').slider({
+      displayCount : 2,
+      cycleCount : 1,
+      mesurementUnit : "vw",
+      widthValue : 80
+    })

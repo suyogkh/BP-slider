@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Slide show</title>
-    <link rel="stylesheet" href="/assets/css/index.css" attr>
+    <link rel="stylesheet" href="/assets/css/BP-slider.min.css" attr>
   </head>
   <body>
     <div class="button-holder">
@@ -96,5 +96,13 @@
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/BP-slider.min.js"></script>
+  <script>
+    $('body').slider({
+      displayCount : 2,
+      cycleCount : 1,
+      mesurementUnit : "vw",
+      widthValue : 80
+    })
+  </script>
 </html>
