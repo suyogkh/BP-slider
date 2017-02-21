@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: sans-serif;
+  outline: none;
+  box-sizing: border-box; }
+
+.button-holder {
+  width: 80vw;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .button-holder .button {
+    padding: 12px 15px;
+    float: left;
+    margin: 20px;
+    background-color: #f00;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s; }
+    .button-holder .button:hover {
+      background-color: #f09; }
+
+.Slide {
+  width: 100%;
+  height: 80vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .Slide-holder {
+    margin: auto;
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap; }
+    .Slide-holder .Slide-list {
+      position: relative;
+      display: inline-block;
+      width: 80vw;
+      background-color: #fff;
+      transition: all 0.5s; }
+      .Slide-holder .Slide-list .Slide-list-container {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 80vh; }
+        .Slide-holder .Slide-list .Slide-list-container .left, .Slide-holder .Slide-list .Slide-list-container .right {
+          width: 50%;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          overflow: hidden; }
+        .Slide-holder .Slide-list .Slide-list-container .left {
+          border-right: 1px solid #ddd; }
+          .Slide-holder .Slide-list .Slide-list-container .left img {
+            width: 100%;
+            margin: auto; }
+        .Slide-holder .Slide-list .Slide-list-container .right {
+          background-color: #ddd; }
+          .Slide-holder .Slide-list .Slide-list-container .right h1 {
+            font-size: 10px;
+            margin: auto; }

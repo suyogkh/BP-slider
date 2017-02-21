@@ -1,0 +1,21 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Slide show
+    link(rel="stylesheet", href="/assets/css/index.css", attr)
+  body
+    .button-holder
+      .button#slideLeft Slide Left
+      .button#slideRight Slide Right
+    .Slide
+      .Slide-holder
+        - for (i = 1; i <= 100; i++)
+          .Slide-list
+            .Slide-list-container
+              .left
+                img(src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg", alt="alt")
+              .right
+                h1 hello slide #{i}
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+  script(src="/assets/js/index.js")
