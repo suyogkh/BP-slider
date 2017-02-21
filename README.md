@@ -1,5 +1,5 @@
 # BP-slider
-> Free jQuery Linear Slider
+Free jQuery Linear Slider
 #### Getting Started
 To install the BP-slider you can download this repository
 
