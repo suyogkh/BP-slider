@@ -2,7 +2,7 @@
     $.fn.slider = function( options ) {
       var currentelement = $(this);
       var index, displaycount, cyclecount, slideholderwidth, slideListWidth, unit, val;
-      var s = $.extend({
+      var s = $.extend({}, {
         displayCount : 1,
         cycleCount : 1,
         mesurementUnit : "vw",
