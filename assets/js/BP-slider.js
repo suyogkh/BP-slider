@@ -1,5 +1,6 @@
 (function ( $ ) {
     $.fn.slider = function( options ) {
+      var currentelement = $(this);
       var index, displaycount, cyclecount, slideholderwidth, slideListWidth, unit, val;
       var s = $.extend({
         displayCount : 1,
@@ -14,15 +15,15 @@
       val = s.widthValue;
 
       // SlideList Width
-      $(".Slide-holder").css("width", val + unit);
-      slideHolderWidth = $(".Slide-holder").width();
-      slideHolderHeight = $(".Slide-holder").height();
+      currentelement.find(".Slide-holder").css("width", val + unit);
+      slideHolderWidth = currentelement.find(".Slide-holder").width();
+      slideHolderHeight = currentelement.find(".Slide-holder").height();
       slideListWidth = slideHolderWidth / displaycount;
-      $(".Slide-list").css("width", slideListWidth);
-      $(".Slide-list").css("height", slideHolderHeight);
+      currentelement.find(".Slide-list").css("width", slideListWidth);
+      currentelement.find(".Slide-list").css("height", slideHolderHeight);
 
       // Slide list length
-      slideListLength = $(".Slide-list").length
+      slideListLength = currentelement.find(".Slide-list").length
 
       // cyclecount mesurement
       if (displaycount < cyclecount) {
@@ -34,7 +35,7 @@
       var SlideRight =  function() {
         index = index + cyclecount;
         if (index < slideListLength) {
-          $(".Slide-list:first").css('margin-left', "-"+ slideListWidth * index + "px");
+          currentelement.find(".Slide-list:first").css('margin-left', "-"+ slideListWidth * index + "px");
         }
         if (index >= slideListLength) {
           index = slideListLength-1;
@@ -43,19 +44,20 @@
 
       // sliding left function
       var SlideLeft =  function() {
+        console.log(currentelement);
         index = index - cyclecount;
         if (index < slideListLength) {
-          $(".Slide-list:first").css('margin-left', "-"+ slideListWidth * index + "px" );
+          currentelement.find(".Slide-list:first").css('margin-left', "-"+ slideListWidth * index + "px" );
         }
         if (index <= 0) {
           index = 0;
         }
       }
 
-      $("#slideLeft").on('click', function() {
+      currentelement.find(".slideLeft").on('click', function() {
         SlideLeft()
       })
-      $("#slideRight").on('click', function() {
+      currentelement.find(".slideRight").on('click', function() {
         SlideRight()
       })
     };

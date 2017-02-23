@@ -6,33 +6,35 @@
   outline: none;
   box-sizing: border-box; }
 
-.button-holder {
-  width: 80vw;
-  margin: 0 auto;
+.Slide {
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-  .button-holder .button {
-    padding: 12px 15px;
-    float: left;
-    margin: 20px;
-    background-color: #f00;
-    border-radius: 2px;
-    cursor: pointer;
-    color: #fff;
-    transition: all 0.3s; }
-    .button-holder .button:hover {
-      background-color: #f09; }
-
-.Slide {
-  width: 100%;
-  height: 80vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 30px; }
+  .Slide .button-holder {
+    width: 80vw;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .Slide .button-holder .button {
+      padding: 12px 15px;
+      float: left;
+      margin: 20px;
+      background-color: #f00;
+      border-radius: 2px;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s; }
+      .Slide .button-holder .button:hover {
+        background-color: #f09; }
   .Slide-holder {
     margin: auto;
     width: 80vw;
@@ -72,5 +74,3 @@
           .Slide-holder .Slide-list .Slide-list-container .right h1 {
             font-size: 10px;
             margin: auto; }
-
-/*# sourceMappingURL=BP-slider.css.map */

@@ -5,10 +5,22 @@ html(lang='en')
     title Slide show
     link(rel="stylesheet", href="/assets/css/BP-slider.min.css", attr)
   body
-    .button-holder
-      .button#slideLeft Slide Left
-      .button#slideRight Slide Right
-    .Slide
+    .Slide.slider1
+      .button-holder
+        .button.slideLeft Slide Left
+        .button.slideRight Slide Right
+      .Slide-holder
+        - for (i = 1; i <= 10; i++)
+          .Slide-list
+            .Slide-list-container
+              .left
+                img(src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg", alt="alt")
+              .right
+                h1 hello slide #{i}
+    .Slide.slider2
+      .button-holder
+        .button.slideLeft Slide Left
+        .button.slideRight Slide Right
       .Slide-holder
         - for (i = 1; i <= 10; i++)
           .Slide-list
@@ -20,9 +32,15 @@ html(lang='en')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
   script(src="/assets/js/BP-slider.min.js")
   script.
-    $('body').slider({
+    $('.slider1').slider({
       displayCount : 2,
       cycleCount : 1,
       mesurementUnit : "vw",
       widthValue : 80
+    })
+    $('.slider2').slider({
+      displayCount : 4,
+      cycleCount : 2,
+      mesurementUnit : "vw",
+      widthValue : 60
     })

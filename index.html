@@ -6,11 +6,99 @@
     <link rel="stylesheet" href="/assets/css/BP-slider.min.css" attr>
   </head>
   <body>
-    <div class="button-holder">
-      <div class="button" id="slideLeft">Slide Left</div>
-      <div class="button" id="slideRight">Slide Right</div>
+    <div class="Slide slider1">
+      <div class="button-holder">
+        <div class="button slideLeft">Slide Left</div>
+        <div class="button slideRight">Slide Right</div>
+      </div>
+      <div class="Slide-holder">
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 1</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 2</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 3</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 4</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 5</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 6</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 7</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 8</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 9</h1>
+            </div>
+          </div>
+        </div>
+        <div class="Slide-list">
+          <div class="Slide-list-container">
+            <div class="left"><img src="http://images.motorcycle-usa.com/photogallerys/14_Ducati_1199Superleggera_8.jpg" alt="alt"></div>
+            <div class="right">
+              <h1>hello slide 10</h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="Slide">
+    <div class="Slide slider2">
+      <div class="button-holder">
+        <div class="button slideLeft">Slide Left</div>
+        <div class="button slideRight">Slide Right</div>
+      </div>
       <div class="Slide-holder">
         <div class="Slide-list">
           <div class="Slide-list-container">
@@ -98,11 +186,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="/assets/js/BP-slider.min.js"></script>
   <script>
-    $('body').slider({
+    $('.slider1').slider({
       displayCount : 2,
       cycleCount : 1,
       mesurementUnit : "vw",
       widthValue : 80
+    })
+    $('.slider2').slider({
+      displayCount : 4,
+      cycleCount : 2,
+      mesurementUnit : "vw",
+      widthValue : 60
     })
   </script>
 </html>
