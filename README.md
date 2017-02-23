@@ -10,42 +10,63 @@ Include JQuery file before our script file.
   <html>
   <head>
       ...
-      <link rel="stylesheet" href="/path/to/BP-slider.css">
+      <link rel="stylesheet" href="/path/to/BP-slider.min.css">
       ...
   </head>
   <body>
-      <script src="/path/to/BP-slider.js"></script>
+      <script src="/path/to/BP-slider.min.js"></script>
   </body>
   </html>
 ```
 Next you need to set up your slider HTML where you want it to appear in your page. It should look something like this:
 ```
+  <div class="Slide slider1">
     <div class="button-holder">
-      <div class="button" id="slideLeft">.../div>
-      <div class="button" id="slideRight">...t</div>
+      <div class="button slideLeft">...</div>
+      <div class="button slideRight">...</div>
     </div>
     <div class="Slide-holder">
       <div class="Slide-list">
         <div class="Slide-list-container">
-          ....
+          ...
         </div>
       </div>
       <div class="Slide-list">
         <div class="Slide-list-container">
-          ....
-        </div>
-      </div>
-      <div class="Slide-list">
-        <div class="Slide-list-container">
-          ....
+          ...
         </div>
       </div>
     </div>
+  </div>
+  <div class="Slide slider2">
+    <div class="button-holder">
+      <div class="button slideLeft">...</div>
+      <div class="button slideRight">...</div>
+    </div>
+    <div class="Slide-holder">
+      <div class="Slide-list">
+        <div class="Slide-list-container">
+          ...
+        </div>
+      </div>
+      <div class="Slide-list">
+        <div class="Slide-list-container">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
 ```
-Note: For next or previous button you just need to use id.
+Note: For next or previous button you just need to use slideLeft, slideRight class to change slide.
 Finally you can create your slider by using the following Javascript:
 ```
-  $('body').slider();
+  $('.slider1').slider({
+      displayCount : 2,
+      cycleCount : 1,
+      mesurementUnit : "vw",
+      widthValue : 80
+    })
+    $('.slider2').slider()
 ```
 Setting | Value | Description
 ------------ | ------------- | -------------
