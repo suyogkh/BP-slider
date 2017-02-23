@@ -10,7 +10,7 @@ html(lang='en')
         .button.slideLeft Slide Left
         .button.slideRight Slide Right
       .Slide-holder
-        - for (i = 1; i <= 10; i++)
+        - for (i = 1; i <= 4; i++)
           .Slide-list
             .Slide-list-container
               .left
@@ -33,10 +33,12 @@ html(lang='en')
   script(src="/assets/js/BP-slider.min.js")
   script.
     $('.slider1').slider({
-      displayCount : 2,
+      displayCount : 1,
       cycleCount : 1,
       mesurementUnit : "vw",
-      widthValue : 80
+      widthValue : 80,
+      autoSlide: true,
+      slideDuration: 2000
     })
     $('.slider2').slider({
       displayCount : 4,

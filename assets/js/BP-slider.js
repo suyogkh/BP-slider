@@ -1,18 +1,22 @@
 (function ( $ ) {
     $.fn.slider = function( options ) {
       var currentelement = $(this);
-      var index, displaycount, cyclecount, slideholderwidth, slideListWidth, unit, val;
+      var index, displaycount, cyclecount, slideholderwidth, slideListWidth, unit, val, autoSlide, slideDuration;
       var s = $.extend({}, {
         displayCount : 1,
         cycleCount : 1,
         mesurementUnit : "vw",
-        widthValue : 80
+        widthValue : 80,
+        autoSlide: false,
+        slideDuration: 2000
       }, options );
       index = 0;
       displaycount = s.displayCount;
       cyclecount = s.cycleCount;
       unit = s.mesurementUnit;
       val = s.widthValue;
+      autoSlide =  s.autoSlide;
+      slideDuration = s.slideDuration;
 
       // SlideList Width
       currentelement.find(".Slide-holder").css("width", val + unit);
@@ -41,6 +45,13 @@
           index = slideListLength-1;
         }
       }
+      var SlideRightLoop =  function() {
+        currentelement.find(".Slide-list:first").css('margin-left', "-"+ 80 + "vw");
+        setTimeout(function() {
+          currentelement.find(".Slide-list:first").appendTo(currentelement.find(".Slide-holder"));
+        }, 500)
+        currentelement.find(".Slide-list:last").css('margin-left', "-"+ 0 + "vw");
+      }
 
       // sliding left function
       var SlideLeft =  function() {
@@ -60,5 +71,8 @@
       currentelement.find(".slideRight").on('click', function() {
         SlideRight()
       })
+      if (autoSlide) {
+        setInterval(SlideRightLoop, slideDuration);
+      }
     };
 }( jQuery ));
