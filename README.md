@@ -1,5 +1,8 @@
 # BP-slider
 Free jQuery Linear Slider
+##### Demo
+This is a codepen [demo for BP-slide !](http://codepen.io/suyogkh/pen/evNgyB)
+
 #### Getting Started
 To install the BP-slider you can download this repository
 
