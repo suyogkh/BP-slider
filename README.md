@@ -20,6 +20,8 @@ Include JQuery file before our script file.
       ...
   </head>
   <body>
+      ...
+      <script src="/path/to/jQuery.min.js"></script>
       <script src="/path/to/BP-slider.min.js"></script>
   </body>
   </html>
